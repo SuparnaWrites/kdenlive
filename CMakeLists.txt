@@ -58,7 +58,7 @@ find_package(KF5 REQUIRED COMPONENTS Archive Bookmarks CoreAddons Config ConfigW
                  OPTIONAL_COMPONENTS DocTools FileMetaData Crash Purpose)
 
 # Qt
-set(QT_MIN_VERSION 5.11.0)
+set(QT_MIN_VERSION 5.15.2)
 if (NOT DEFINED QT_MAJOR_VERSION)
     set(QT_MAJOR_VERSION 5)
 endif()
