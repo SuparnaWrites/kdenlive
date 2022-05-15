@@ -540,12 +540,12 @@ void PreviewManager::startPreviewRender()
             const QString final = doc.toString().toUtf8();
             QSaveFile file(sceneList);
             if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-                qDebug()<<"//////  ERROR writing to file: " << sceneList;
+                qDebug() << "//////  ERROR writing to file: " << sceneList;
                 return;
             }
             file.write(final.toUtf8());
             if (!file.commit()) {
-                qDebug()<<"Cannot write to file "<<sceneList;
+                qDebug() << "Cannot write to file " << sceneList;
                 return;
             }
         } else {
@@ -587,7 +587,7 @@ void PreviewManager::doPreviewRender(const QString &scene)
     QMutexLocker lock(&m_dirtyMutex);
     Q_ASSERT(m_previewProcess.state() == QProcess::NotRunning);
     std::sort(m_dirtyChunks.begin(), m_dirtyChunks.end());
-    qDebug()<<":: got dirty chks: "<<m_dirtyChunks;
+    qDebug() << ":: got dirty chks: " << m_dirtyChunks;
     const QStringList dirtyChunks = getCompressedList(m_dirtyChunks);
     m_chunksToRender = m_dirtyChunks.count();
     m_processedChunks = 0;

@@ -188,7 +188,6 @@ EncodingProfilesChooser::EncodingProfilesChooser(QWidget *parent, EncodingProfil
     , m_showAutoItem(showAutoItem)
 {
     QGridLayout *grid = new QGridLayout();
-    grid->setMargin(0);
     setLayout(grid);
     m_profilesCombo = new QComboBox();
     if (!configName.isEmpty()) {

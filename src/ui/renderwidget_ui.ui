@@ -44,10 +44,10 @@
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="8" column="0">
            <widget class="KMessageWidget" name="infoMessage">
-            <property name="wordWrap">
+            <property name="wordWrap" stdset="0">
              <bool>true</bool>
             </property>
-            <property name="closeButtonVisible">
+            <property name="closeButtonVisible" stdset="0">
              <bool>false</bool>
             </property>
            </widget>
@@ -105,18 +105,12 @@
              </widget>
             </item>
             <item>
-             <widget class="KUrlRequester" name="out_file">
+             <widget class="KUrlRequester" name="out_file" native="true">
               <property name="focusPolicy">
                <enum>Qt::ClickFocus</enum>
               </property>
               <property name="toolTip">
                <string>Select output destination</string>
-              </property>
-              <property name="mode">
-               <set>KFile::File</set>
-              </property>
-              <property name="acceptMode">
-               <enum>QFileDialog::AcceptSave</enum>
               </property>
              </widget>
             </item>
@@ -418,7 +412,7 @@
                 </sizepolicy>
                </property>
                <property name="sizeAdjustPolicy">
-                <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+                <enum>QComboBox::AdjustToContents</enum>
                </property>
               </widget>
              </item>
@@ -923,7 +917,7 @@
        </item>
        <item row="2" column="0" colspan="6">
         <widget class="KMessageWidget" name="jobInfo">
-         <property name="closeButtonVisible">
+         <property name="closeButtonVisible" stdset="0">
           <bool>false</bool>
          </property>
         </widget>
@@ -1013,11 +1007,13 @@
    <class>KMessageWidget</class>
    <extends>QFrame</extends>
    <header>kmessagewidget.h</header>
+   <container>1</container>
   </customwidget>
   <customwidget>
    <class>KSeparator</class>
    <extends>QFrame</extends>
    <header>kseparator.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>
